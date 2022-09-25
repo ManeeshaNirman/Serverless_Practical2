@@ -26,6 +26,12 @@ const serverlessConfiguration: AWS = {
     environment: {
       AWS_NODEJS_CONNECTION_REUSE_ENABLED: '1',
       NODE_OPTIONS: '--enable-source-maps --stack-trace-limit=1000',
+      DBHOSTNAME:'student-service-test.cluster-ccrzylxpgyd2.us-west-2.rds.amazonaws.com',
+      DBPORT:'5432',
+      DBNAME:'studentdb',
+      DBUSERNAME:'postgres',
+      DBPASSWORD:'12345678',
+      DBSCHEMA:'public'
     },
   },
   // import the function via paths
@@ -36,7 +42,7 @@ const serverlessConfiguration: AWS = {
       bundle: true,
       minify: false,
       sourcemap: true,
-      exclude: ['aws-sdk'],
+      exclude: ['aws-sdk','pg-native'],
       target: 'node14',
       define: { 'require.resolve': undefined },
       platform: 'node',

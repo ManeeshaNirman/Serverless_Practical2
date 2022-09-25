@@ -1,7 +1,7 @@
 export default {
   type: "object",
   properties: {
-    name: { type: 'string' }
+    firstName: { type: 'string' }
   },
-  required: ['name']
+  required: ['firstName']
 } as const;

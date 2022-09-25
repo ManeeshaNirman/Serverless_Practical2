@@ -1,7 +1,9 @@
-import { default as hello } from './hello';
+import { create,fetch,fetchAll } from './student';
 
 const functions = {
-hello,
+create,
+fetch,
+fetchAll,
 }
 
 export default functions;
